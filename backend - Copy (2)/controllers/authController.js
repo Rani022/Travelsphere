@@ -2,10 +2,6 @@ import User from "../models/User.js";
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 
-// User registration
-export const register = async (req, res) => {
-  try {
-    // Hashing password
     const salt = bcrypt.genSaltSync(10)
     const hash = bcrypt.hashSync(req.body.password, salt)
 
